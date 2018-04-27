@@ -82,11 +82,32 @@ DefaultNotificatorRenderer::create()->display(Notificator::getNotifications());
 
 
 
+How to add a persistent notification
+==================
+
+The code below uses the SessionNotificator, which basically survives one http redirection (this might be useful sometime).
+
+
+```php
+// somewhere in the MODEL 
+SessionNotificator::addError("oops, not good");
+
+// somewhere in the VIEW 
+DefaultNotificatorRenderer::create()->display(SessionNotificator::getNotifications());
+```
+
+
+
+
 
 
 
 History Log
 ------------------
+    
+- 1.1.0 -- 2018-04-27
+
+    - add SessionNotificator class
     
 - 1.0.0 -- 2018-04-27
 

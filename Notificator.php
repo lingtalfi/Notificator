@@ -56,8 +56,9 @@ class Notificator
 
     public static function getNotifications(string $type = null)
     {
+        $notifs = static::getAllNotifications();
         if (null === $type) {
-            return self::$notifs;
+            return $notifs;
         }
         if (array_key_exists($type, [
             "success",
@@ -65,7 +66,7 @@ class Notificator
             "warning",
             "error",
         ])) {
-            return self::$notifs[$type];
+            return $notifs[$type];
         }
         throw new NotificatorException("Unknown notification type: $type");
     }
@@ -73,9 +74,24 @@ class Notificator
     //--------------------------------------------
     //
     //--------------------------------------------
+    protected static function onNotificationAddedAfter(array $notifications)
+    {
+
+    }
+
+    protected static function getAllNotifications()
+    {
+        return self::$notifs;
+    }
+
+
+    //--------------------------------------------
+    //
+    //--------------------------------------------
     private static function addNotif(string $msg, string $type, array $options = [])
     {
         self::$notifs[$type][] = [$msg, $options];
+        static::onNotificationAddedAfter(self::$notifs);
     }
 
 }
