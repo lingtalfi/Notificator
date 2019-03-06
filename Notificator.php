@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Notificator;
+namespace Ling\Notificator;
 
 
-use Notificator\Exception\NotificatorException;
+use Ling\Notificator\Exception\NotificatorException;
 
 
 /**

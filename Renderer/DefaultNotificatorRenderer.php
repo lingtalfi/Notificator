@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Notificator\Renderer;
+namespace Ling\Notificator\Renderer;
 
 
 class DefaultNotificatorRenderer extends BaseNotificatorRenderer

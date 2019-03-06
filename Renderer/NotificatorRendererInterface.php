@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Notificator\Renderer;
+namespace Ling\Notificator\Renderer;
 
 
 interface NotificatorRendererInterface

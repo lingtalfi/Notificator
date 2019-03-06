@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Notificator;
+namespace Ling\Notificator;
 
 
-use Bat\SessionTool;
+use Ling\Bat\SessionTool;
 
 
 /**
