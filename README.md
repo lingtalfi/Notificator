@@ -104,7 +104,11 @@ DefaultNotificatorRenderer::create()->display(SessionNotificator::getNotificatio
 
 History Log
 ------------------
-    
+
+- 1.1.1 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.1.0 -- 2018-04-27
 
     - add SessionNotificator class
